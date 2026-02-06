@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>MasterBlog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<main class="container">
+
+    <h1>📝 MasterBlog</h1>
+
+    <p>
+        <a href="{{ url_for('add') }}" class="add-link">➕ Neuen Beitrag erstellen</a>
+    </p>
+
+    <hr>
+
+    {% if posts and posts|length > 0 %}
+        {% for post in posts %}
+            <article class="post">
+
+                <h2>{{ post.title }}</h2>
+
+                <p class="meta">
+                    ✍️ Autor: <strong>{{ post.author }}</strong>
+                    · ❤️ Likes: {{ post.likes }}
+                </p>
+
+                <p class="content">{{ post.content }}</p>
+
+                <!-- LIKE Button -->
+                <a href="{{ url_for('like', post_id=post.id) }}" class="like-btn">
+                    ❤️ Like ({{ post.likes }})
+                </a>
+
+                <!-- Edit Button -->
+                <a href="{{ url_for('update', post_id=post.id) }}" class="edit-btn">
+                    ✏️ Bearbeiten
+                </a>
+
+                <!-- Delete Button -->
+                <a href="{{ url_for('delete', post_id=post.id) }}"
+                   class="delete-btn"
+                   onclick="return confirm('Willst du diesen Beitrag wirklich löschen?');">
+                    🗑 Löschen
+                </a>
+
+            </article>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>🚫 Noch keine Blogbeiträge vorhanden.</p>
+    {% endif %}
+
+</main>
+</body>
+</html>

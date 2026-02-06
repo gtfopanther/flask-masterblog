@@ -1,0 +1,17 @@
+.delete-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: 1px solid #c00;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.like-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 6px 12px;
+    border: 1px solid hotpink;
+    border-radius: 6px;
+    text-decoration: none;
+}
