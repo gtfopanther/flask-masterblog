@@ -1,0 +1,78 @@
+# ============================
+# Python / Flask
+# ============================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Flask stuff
+instance/
+.webassets-cache/
+
+# Environment variables
+.env
+.env.*
+
+# ============================
+# PyCharm / JetBrains
+# ============================
+
+.idea/
+*.iml
+
+# ============================
+# VS Code (falls genutzt)
+# ============================
+
+.vscode/
+
+# ============================
+# Logs & Debug
+# ============================
+
+*.log
+*.sqlite3
+*.db
+
+# ============================
+# OS / Windows
+# ============================
+
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Windows installer files
+*.msi
+*.cab
+*.exe
+
+# ============================
+# MacOS (falls später)
+# ============================
+
+.DS_Store
+
+# ============================
+# Python build artifacts
+# ============================
+
+build/
+dist/
+*.egg-info/
+
+# ============================
+# Testing
+# ============================
+
+.pytest_cache/
+coverage/
+htmlcov/
